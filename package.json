@@ -1,7 +1,7 @@
 {
   "name": "grunt-css-wrap",
   "description": "wrap css rules in a namespace",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/benignware/grunt-css-wrap",
   "author": {
     "name": "Rafael Nowrotek",
