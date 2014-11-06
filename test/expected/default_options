@@ -2,6 +2,10 @@
   background: green;
 }
 
+.my-app.ignore_space .another-selector {
+  background: blue;
+}
+
 @media (min-width: 768px) {
   .my-app .some-css-selector {
     width: 750px;

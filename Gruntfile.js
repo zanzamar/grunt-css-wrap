@@ -32,7 +32,9 @@ module.exports = function(grunt) {
     css_wrap: {
       default_options: {
         options: {
-          selector: '.my-app'
+          selector: '.my-app',
+          regexMatch: /ignore/,
+          regexMatchSeparator: ""
         },
         files: {
           'tmp/default_options': ['test/fixtures/styles.css']

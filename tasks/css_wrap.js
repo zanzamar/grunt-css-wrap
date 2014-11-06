@@ -24,7 +24,11 @@ module.exports = function( grunt ) {
 			return list.map( function( r ) {
 				if ( r.selectors ) {
 					r.selectors.forEach( function( s, index ) {
-						var selector = options.selector ? options.selector + " " + s : s;
+						var separator = options.separator;
+						if ( options.regexMatch && options.regexMatch.test( s ) ) {
+							separator = options.regexMatchSeparator;
+						}
+						var selector = options.selector ? options.selector + separator + s : s;
 						r.selectors[ index ] = selector;
 					});
 				}
@@ -38,7 +42,10 @@ module.exports = function( grunt ) {
 		var options = this.options({
 
 			// defaults
-			selector: ".css-wrap"
+			selector: ".css-wrap",
+			separator: " ",
+			regexMatch: undefined,
+			regexMatchSeparator: ""
 		});
 
 		var dest;

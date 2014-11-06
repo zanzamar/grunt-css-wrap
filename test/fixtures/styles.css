@@ -1,6 +1,10 @@
 .some-css-selector {
   background: green;
 }
+.ignore_space .another-selector {
+  background: blue;
+}
+
 @media (min-width: 768px) {
   .some-css-selector {
     width: 750px;
